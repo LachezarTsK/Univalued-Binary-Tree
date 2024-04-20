@@ -5,10 +5,10 @@ public class Solution
 {
     public bool IsUnivalTree(TreeNode root)
     {
-        return allNodeValuesAreTheSame(root, root.val);
+        return AllNodeValuesAreTheSame(root, root.val);
     }
 
-    private bool allNodeValuesAreTheSame(TreeNode node, int previousValue)
+    private bool AllNodeValuesAreTheSame(TreeNode node, int previousValue)
     {
         if (node == null)
         {
@@ -18,7 +18,7 @@ public class Solution
         {
             return false;
         }
-        return allNodeValuesAreTheSame(node.left, node.val) && allNodeValuesAreTheSame(node.right, node.val);
+        return AllNodeValuesAreTheSame(node.left, node.val) && AllNodeValuesAreTheSame(node.right, node.val);
     }
 }
 
